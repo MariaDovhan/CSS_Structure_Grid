@@ -3,7 +3,7 @@ body {
     display: grid;
     column-gap: 3%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto;
     height: 100vh;
     scroll-behavior: smooth;
 }
@@ -59,18 +59,22 @@ header, footer {
 
 #chapter-1 {
     grid-column: 2;
+    grid-row: 1;
 }
 
 #chapter-2 {
     grid-column: 3;
+    grid-row: 1;
 }
 
 #chapter-3 {
     grid-column: 4;
+    grid-row: 1;
 }
 
 #chapter-4 {
     grid-column: 5;
+    grid-row: 1;
 }
 
 .nav-link {
@@ -79,42 +83,53 @@ header, footer {
     padding: 10px;
 }
 
+.current-page {
+    text-decoration: underline;
+}
+
+.grid-layout {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 3%;
+}
+
 .grid-section-1 {
     grid-column: 1;
-    grid-row: 2 / span 2;
+    grid-row: 1 / span 4;
 }
 
 .grid-section-2 {
     grid-column: 2;
-    grid-row: 2 / span 2;
+    grid-row: 1 / span 4;
 }
 
 .grid-aside-3 {
     grid-column: 3 / span 2;
-    grid-row: 2;
-    align-self: start;
-    height: fit-content;
+    grid-row: 1;
 }
 
-.flex-list {
-    display: flex;
-    flex-wrap: wrap;
+.grid-list {
+    display: grid;
+    grid-template-columns: auto auto;
     justify-content: space-around;
     align-content: space-around;
 }
-.flex-list-item {
+.grid-list-item {
     padding: 5px;
     font-style: italic;
 }
 
 .grid-section-4 {
     grid-column: 3;
-    grid-row: 3;
+    grid-row: 2 / span 3;
 }
 
 .grid-section-5 {
     grid-column: 4;
-    grid-row: 3;
+    grid-row: 2 / span 3;
 }
 
 section, aside {
@@ -156,12 +171,11 @@ section, aside {
 
 footer {
     grid-column: 1 / span 4;
-    grid-row: 4;
+    grid-row: 3;
     display: grid;
     grid-template-columns: 1fr, 1fr;
     grid-template-rows: 1fr;
     justify-content: space-between;
-    height: fit-content;
     bottom: 0;
     width: 100%;
 }
