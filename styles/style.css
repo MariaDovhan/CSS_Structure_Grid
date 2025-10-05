@@ -116,6 +116,7 @@ header, footer {
     grid-template-columns: auto auto;
     justify-content: space-around;
     align-content: space-around;
+    list-style-position: inside;
 }
 .grid-list-item {
     padding: 5px;
@@ -173,7 +174,7 @@ footer {
     grid-column: 1 / span 4;
     grid-row: 3;
     display: grid;
-    grid-template-columns: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     justify-content: space-between;
     bottom: 0;
@@ -188,6 +189,7 @@ footer {
 
 #copyright {
     grid-column: 1;
+    justify-self: left;
     font-size: 16px;
     padding: 5 px;
     color: #f0eada;
@@ -195,10 +197,13 @@ footer {
 
 #return-up {
     grid-column: 2;
+    justify-self: right;
     font-size: 16px;
     padding: 5px 30px 5px 30px;
     border-radius: 12px;
     border: none;
     background-color: #f0eada;
     color: #130361;
+    height: fit-content;
+    width: fit-content;
 }
